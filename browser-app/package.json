@@ -26,6 +26,6 @@
     "watch": "yarn rebuild && theia build --watch --mode development"
   },
   "theia": {
-    "target": "browser"
+    "target": "browser-only"
   }
 }
