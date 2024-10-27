@@ -6,6 +6,7 @@
   },
   "scripts": {
     "build:browser": "yarn --cwd browser-app bundle",
+    "build:browser:prod": "yarn --cwd browser-app bundle-prod",
     "build:electron": "yarn --cwd electron-app bundle",
     "prepare": "lerna run prepare",
     "postinstall": "theia check:theia-version",
