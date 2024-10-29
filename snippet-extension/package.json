@@ -1,0 +1,20 @@
+{
+  "name": "snippet-extension",
+  "displayName": "snippet-extension",
+  "description": "Example of snippet extension",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
