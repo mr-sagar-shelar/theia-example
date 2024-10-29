@@ -8,13 +8,20 @@
     "build:browser": "yarn --cwd browser-app bundle",
     "build:browser:prod": "yarn --cwd browser-app bundle-prod",
     "build:electron": "yarn --cwd electron-app bundle",
-    "prepare": "lerna run prepare",
+    "prepare1": "lerna run prepare",
     "postinstall": "theia check:theia-version",
     "start:browser": "yarn --cwd browser-app start",
     "start:electron": "yarn --cwd electron-app start",
     "watch:browser": "lerna run --parallel watch --ignore electron-app",
     "watch:electron": "lerna run --parallel watch --ignore browser-app",
-    "copy-to-docs": "cp -rf ./browser-app/lib/frontend/ ./docs"
+    "copy-to-docs": "cp -rf ./browser-app/lib/frontend/ ./docs",
+    "prepare": "yarn run clean && yarn build:browser:prod && yarn run download:plugins",
+    "download:plugins": "theia download:plugins",
+    "clean": "theia clean"
+  },
+  "theiaPluginsDir": "plugins",
+  "theiaPlugins": {
+    "vscode.git": "https://open-vsx.org/api/vscode/git/1.52.1/file/vscode.git-1.52.1.vsix"
   },
   "devDependencies": {
     "lerna": "2.4.0"
